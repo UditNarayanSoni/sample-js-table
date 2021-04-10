@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table By JS</title>
+</head>
+<body>
+  <table id="myid" border="1"></table>
+  <script> 
+      // creating table:
+      // var table = document.createElement("table");
+      // table.attributes.name = "id";
+      // table.attributes.value = "myid";
+      // console.log(table.attributes);
+      var table = document.getElementById("myid");
+      var cap = document.createElement("caption");
+      cap.attributes.name = "id";
+      cap.attributes.value = "mycap";
+      cap.innerHTML = "New Caption";
+      table.appendChild(cap);
+      // console.log(table);
+      var thead = table.createTHead();
+      thead.innerHTML = "<tr><th>Name</th><th>Roll No.</th><th>Gmail</th></tr>";
+      var tbody = table.createTBody();
+      tbody.innerHTML = "<tr><td>Tarun Yadav</td><td>11</td><td>Tarun@abc.com</td></tr><tr><td>Varun Singh</td><td>21</td><td>varuns@cdm.com</td></tr>";
+      console.log(table); 
+    // console.log(table);
+</script>
+</body>
+</html>
